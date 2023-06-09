@@ -1,6 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,900&display=swap');
 
-* {
+* { /*browser default reset */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,10 +9,19 @@
     /* overflow: auto; */
 
 }
-:root {
-    --bg-color: rgb(217, 212, 206);
-    --secondary-color:  rgb(55, 119, 214);
-    --text-color: rgb(26, 0, 0);
+:root { /* makes changing values easier*/
+    --bg-color: rgb(233, 202, 176);
+    --secondary-color:  rgb(148, 95, 15);
+    --nav-bg-color: rgb(47, 18, 15);
+    --hover-text-shadow:
+        0 0 10px rgba(233, 202, 176, 0.6),
+        0 0 20px rgba(233, 202, 176, 0.6),
+        0 0 30px rgba(233, 202, 176, 0.6),
+        0 0 40px rgba(233, 202, 176, 0.6),
+        0 0 70px rgba(233, 202, 176, 0.6),
+        0 0 80px rgba(233, 202, 176, 0.6),
+        0 0 100px rgba(233, 202, 176, 0.6),
+        0 0 150px rgba(233, 202, 176, 0.6);
 }
 
 /* Header section */
@@ -20,39 +29,58 @@
     display: flex;
     align-content: center;
     justify-content: space-between;
+    margin: 5px 0 0 0 ;
 }
 .--logo {
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 3px;
-    font-weight: 500;
-    color: var(--text-color);
+    font-weight: 800;
+    margin: 0 0 0 30px;
+    /* color: var(--text-color); */
 }
 .--logo span {
     color: var(--secondary-color );
 }
-nav{
-    background-color: brown;
-    border-radius: 10px;
+.nav--container {
+    background-color: var(--nav-bg-color);
+    padding: 1px;
+    border-radius: 5px;
 }
 .nav--menu {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    background-color: brown;
-    overflow: hidden;
 }
 .nav--item{
-    padding: 0 10px 0 0;
+    padding: 2px 20px 3px 10px;
+    background-color: var(--nav-bg-color);
+    align-items: center;
 }
 .nav--item a {
-    display: inline;
+    text-align: center;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--bg-color);
     font-size: 10px ;
+    background-color: var(--nav-bg-color);
 }
 .nav--item a:hover {
     color: var(--secondary-color);
+    text-shadow: var(--hover-text-shadow);
 }
-#mobile--menu--container {
+.social-media-icons--container {
+    margin: 0 30px 0 0;
+}
+.social-media-icons--container a {
+    text-decoration: none;
+    color: var(--nav-bg-color);
+}
+#mobile-menu-icon {
+    font-size: 1.8rem;
+    text-align: center;
+    z-index: 10001;
+    cursor: pointer;
+    background-color: var(--nav-bg-color);
+    color: var(--bg-color);
+    margin: 0 30px 0 0;
     display: none;
 }
